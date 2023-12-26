@@ -14,9 +14,9 @@ final class WeatherBlocLoading extends WeatherBlocState {}
 final class WeatherBlocFailure extends WeatherBlocState {}
 
 final class WeatherBlocSuccess extends WeatherBlocState {
-  // final qwerty qwerty;
+  final Weather weather;
 
-  // const qwertyBlocSuccess(this.qwerty);
-  // @override
-  // List<Object> get props => [qwerty];
+  const WeatherBlocSuccess(this.weather);
+  @override
+  List<Object> get props => [weather];
 }

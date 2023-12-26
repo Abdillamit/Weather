@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_weather/bloc/weather_bloc_bloc.dart';
 import 'package:my_weather/screens/home_screen.dart';
 
 void main() {
@@ -16,7 +18,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const Home(),
+      home: BlocProvider<WeatherBlocBloc>(
+        create: (context) => WeatherBlocBloc()..add(FetchWeathe()),
+        child: const Home(),
+      ),
     );
   }
 }
