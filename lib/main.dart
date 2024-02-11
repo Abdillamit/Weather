@@ -4,7 +4,12 @@ import 'package:geolocator/geolocator.dart';
 import 'package:my_weather/bloc/weather_bloc_bloc.dart';
 import 'package:my_weather/screens/home_screen.dart';
 
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+
 void main() {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  FlutterNativeSplash.remove(); 
   runApp(const MainApp());
 }
 

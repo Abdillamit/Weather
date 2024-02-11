@@ -100,7 +100,7 @@ class _HomeState extends State<Home> {
                           height: 8,
                         ),
                         const Text(
-                          "Hello Abu",
+                          "Good Moring !",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 25,
@@ -131,7 +131,6 @@ class _HomeState extends State<Home> {
                             DateFormat('EEEE dd •')
                                 .add_jm()
                                 .format(state.weather.date!),
-                            // "Friay 16 • 09.41am",
                             style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
